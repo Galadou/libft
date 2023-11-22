@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: gmersch <marvin@42.fr>                     +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2023/11/20 02:01:45 by gmersch           #+#    #+#              #
+#    Updated: 2023/11/20 02:01:48 by gmersch          ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 COMP		= gcc
 CFLAGS		= -Wall -Werror -Wextra
 NAME		= libft.a
@@ -75,9 +87,5 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean $(NAME)
-
-so:
-	$(COMP) -nostartfiles -fPIC $(CFLAGS) $(SRC)
-	cc -nostartfiles -shared -o libft.so $(OBJS) $(OBJS_BONUS)
 
 .PHONY: clean fclean re all bonus

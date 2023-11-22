@@ -20,23 +20,17 @@ char	*ft_strchr(const char *s, int c)
 	c %= 128;
 	if (ft_isascii(c) == 0)
 	{
-		pt = (char *)&s[0];
+		pt = ((char *)&s[0]);
 		return (pt);
 	}
 	i = 0;
 	while (s[i] != '\0')
 	{
 		if (s[i] == c)
-		{
-			pt = (char *)&s[i];
-			return (pt);
-		}
+			return ((char *)&s[i]);
 		i++;
 	}
 	if (s[i] == c)
-	{
-		pt = (char *)&s[i];
-		return (pt);
-	}
+		return ((char *)&s[i]);
 	return (0);
 }

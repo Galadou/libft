@@ -12,14 +12,7 @@
 
 #include "libft.h"
 
-struct s_Variable
-{
-	int	i;
-	int	f;
-	int	lastf;
-};
-
-int	strlen_c(const char *s, char c)
+static int	strlen_c(const char *s, char c)
 {
 	int	f;
 	int	i;
@@ -45,7 +38,7 @@ int	strlen_c(const char *s, char c)
 	return (f);
 }
 
-char	**verif(struct s_Variable *point, const char *s, char c, char **str)
+static char	**verif(struct s_Variable *point, const char *s, char c, char **str)
 {
 	size_t	len;
 
@@ -73,7 +66,7 @@ char	**verif(struct s_Variable *point, const char *s, char c, char **str)
 	return (str);
 }
 
-char	**write_str(struct s_Variable *point, const char *s, char c)
+static char	**write_str(struct s_Variable *point, const char *s, char c)
 {
 	char	**str;
 
@@ -90,7 +83,7 @@ char	**write_str(struct s_Variable *point, const char *s, char c)
 	return (str);
 }
 
-char	**if_str_empty(void)
+static char	**if_str_empty(void)
 {
 	char	**str;
 

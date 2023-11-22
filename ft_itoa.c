@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-size_t	count_number(int n, int *negatif)
+static size_t	count_number(int n, int *negatif)
 {
 	size_t	c;
 
@@ -32,7 +32,7 @@ size_t	count_number(int n, int *negatif)
 	return (c);
 }
 
-char	*ft_swap(char *str, int negatif)
+static char	*ft_swap(char *str, int negatif)
 {
 	char	b;
 	int		a;
@@ -54,7 +54,7 @@ char	*ft_swap(char *str, int negatif)
 	return (str);
 }
 
-char	*write_str2(char *str, int n, int negatif)
+static char	*write_str2(char *str, int n, int negatif)
 {
 	int	i;
 
