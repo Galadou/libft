@@ -6,13 +6,13 @@
 /*   By: gmersch <gmersch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/28 16:16:29 by gmersch           #+#    #+#             */
-/*   Updated: 2024/06/28 16:16:30 by gmersch          ###   ########.fr       */
+/*   Updated: 2024/06/28 16:44:50 by gmersch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-//addback for a string. Need to send &str (str is a char*), and the new char to add
+//addback for a string. Need to send &str (str is a char*)
 char	*ft_charaddback(char **old_array, char new_element)
 {
 	char	*new_array;
