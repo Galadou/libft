@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: gmersch <marvin@42.fr>                     +#+  +:+       +#+         #
+#    By: gmersch <gmersch@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/20 02:01:45 by gmersch           #+#    #+#              #
-#    Updated: 2023/11/20 02:01:48 by gmersch          ###   ########.fr        #
+#    Updated: 2024/06/28 16:29:43 by gmersch          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,7 +48,24 @@ SRC		= ft_atoi.c\
 		ft_putstr_fd.c\
 		ft_putendl_fd.c\
 		ft_putnbr_fd.c\
-		ft_striteri.c
+		ft_striteri.c\
+		ft_addback_array_free.c\
+		ft_addback_array.c\
+		ft_addback_char.c\
+		ft_addback_int.c\
+		ft_catch_env.c\
+		ft_is_only_space.c\
+		ft_remove_element.c\
+		ft_strdup_array.c\
+		ft_strdup_better.c\
+		ft_strjoin_free.c\
+		ft_strlen_array.c\
+		ft_strlen_better.c\
+		ft_free_array.c\
+
+
+
+
 
 BONUS		= ft_lstnew.c\
 		ft_lstadd_front.c\
@@ -72,8 +89,8 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
-	
-bonus: 
+
+bonus:
 	@make value=1;
 
 %.o : %.c

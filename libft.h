@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gmersch <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: gmersch <gmersch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 17:05:45 by gmersch           #+#    #+#             */
-/*   Updated: 2023/11/20 17:05:50 by gmersch          ###   ########.fr       */
+/*   Updated: 2024/06/28 16:40:45 by gmersch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdbool.h>
+# include <fcntl.h>
 
 typedef struct s_list
 {
@@ -44,6 +46,21 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 
+int		is_only_space(char *str);//new
+size_t	ft_better_strlen(const char *s);//new
+char	*ft_strjoin_free(char *s1, char *s2); //new
+char	*ft_better_strdup_free(char *s, char *arg);//new
+char	*ft_strdup_better(char *s, char *arg);//new
+int		ft_strlen_array(char **array);//new
+void	ft_remove_element(char **array, int id_rm); //new
+char	**ft_addback_array(char **old_array, char *new_element); //new
+char	**ft_addback_free(char **old_array, char *new_element);//new
+char	*ft_catch_env(char **envp, char *str);//new
+void	ft_free_array(char **tab);//new
+char	*ft_charaddback(char **old_array, char new_element);//new
+int		*ft_addback_int(int *old_array, int new_element);//new
+char	**ft_strdup_array(char **array);//new
+
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
@@ -52,7 +69,6 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 int		ft_atoi(const char *nptr);
 char	*ft_strrchr(const char *s, int c);
-
 void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_strdup(const char *s);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
